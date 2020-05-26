@@ -106,7 +106,7 @@ struct MovieRowView: View {
                     .font(.system(.subheadline))
                 
                 
-                Text("21 July 2017")
+                Text("\(MovieRowView.dateFormatter.string(from: movie.releaseDateObj ?? Date()))")
                     .font(.system(.subheadline))
                     .foregroundColor(Color(#colorLiteral(red: 0.5176470588, green: 0.5176470588, blue: 0.5176470588, alpha: 1)))
                             
@@ -136,6 +136,12 @@ struct MovieRowView: View {
         }
 
     }
+    
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }()
 }
 
 private func movieItemRow(movie: Movie) -> some View {

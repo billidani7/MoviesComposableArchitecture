@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UITableView.appearance().backgroundColor = UIColor.clear
+        
+        UITableViewCell.appearance().backgroundColor = .clear
+        UITableView.appearance().separatorStyle = .none
+        
         return true
     }
 
