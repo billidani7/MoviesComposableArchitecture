@@ -37,8 +37,8 @@ We’ll define the state of our search feature.
 We want to hold what user typed in the text filed, and when we get a response from the API, we want to hold the response (Movies).
 ```Swift
 public struct SearchState: Equatable {
-    var movies: [Movie] = []
-    var searchQuery = ""
+    var movies: [Movie] = [] //results from API
+    var searchQuery = "" //user's search term
 }
 ```
 ## Define reducer  
