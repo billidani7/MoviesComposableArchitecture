@@ -1,7 +1,7 @@
 # Composable Architecture
 Redux-like Architecture with SwiftUI
 
-![ezgif.com-resize.gif](https://imgshare.io/images/2020/05/26/ezgif.com-resize.gif)
+![ezgif.com-resize-2.gif](https://imgshare.io/images/2020/05/26/ezgif.com-resize-2.gif)
 
 ## Core Concepts
 **State**  
