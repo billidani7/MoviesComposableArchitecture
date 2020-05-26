@@ -1,7 +1,7 @@
 # Composable Architecture
 Redux-like Architecture with SwiftUI
 
-<img src="https://imgshare.io/images/2020/05/26/ezgif.com-resize-2.gif" width="100" height="100">
+![Farmers Market Finder Demo](movie-preview.gif)
 
 ## Core Concepts
 **State**  
