@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,38 @@
 		338D33FA246EC65D000D8518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338D33F9246EC65D000D8518 /* Assets.xcassets */; };
 		338D33FD246EC65D000D8518 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338D33FC246EC65D000D8518 /* Preview Assets.xcassets */; };
 		338D3400246EC65D000D8518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338D33FE246EC65D000D8518 /* LaunchScreen.storyboard */; };
+		338D3409246EC6BF000D8518 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 338D3408246EC6BF000D8518 /* ComposableArchitecture */; };
+		338D340B246EC6DD000D8518 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D340A246EC6DD000D8518 /* AppCore.swift */; };
+		338D340E246EC777000D8518 /* MoviesCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D340D246EC777000D8518 /* MoviesCore.swift */; };
+		338D3416246EC822000D8518 /* PaginatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D3411246EC822000D8518 /* PaginatedResponse.swift */; };
+		338D3417246EC822000D8518 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D3412246EC822000D8518 /* APIService.swift */; };
+		338D3418246EC822000D8518 /* SimpleResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D3413246EC822000D8518 /* SimpleResponce.swift */; };
+		338D3419246EC822000D8518 /* ShowFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D3414246EC822000D8518 /* ShowFilters.swift */; };
+		338D341F246EC833000D8518 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D341B246EC832000D8518 /* Video.swift */; };
+		338D3420246EC833000D8518 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D341C246EC832000D8518 /* People.swift */; };
+		338D3421246EC833000D8518 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D341D246EC833000D8518 /* Movie.swift */; };
+		338D3422246EC833000D8518 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D341E246EC833000D8518 /* Genre.swift */; };
+		338D3424246ECADE000D8518 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D3423246ECADE000D8518 /* APIClient.swift */; };
+		338D3428246ED8C0000D8518 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D3427246ED8C0000D8518 /* MoviesView.swift */; };
+		338D342D246EEA36000D8518 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 338D342C246EEA36000D8518 /* SDWebImageSwiftUI */; };
+		338D342F246EEA6E000D8518 /* CarouselBackdropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D342E246EEA6E000D8518 /* CarouselBackdropView.swift */; };
+		338D3431246EED9C000D8518 /* CarouselPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D3430246EED9C000D8518 /* CarouselPosterView.swift */; };
+		338D343324701F1A000D8518 /* SearchCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D343224701F1A000D8518 /* SearchCore.swift */; };
+		338D343524702580000D8518 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D343424702580000D8518 /* SearchView.swift */; };
+		338D3437247037B1000D8518 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D3436247037B1000D8518 /* RingView.swift */; };
+		338D343924703984000D8518 /* DismissingKeyboardOnSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D343824703984000D8518 /* DismissingKeyboardOnSwipe.swift */; };
+		33B0D68A2470474C009C5CAE /* ComposableArchDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B0D6892470474C009C5CAE /* ComposableArchDemoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33B0D68C2470474C009C5CAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338D33E8246EC65C000D8518 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338D33EF246EC65C000D8518;
+			remoteInfo = ComposableArchDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		338D33F0246EC65C000D8518 /* ComposableArchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComposableArchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +55,40 @@
 		338D33FC246EC65D000D8518 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		338D33FF246EC65D000D8518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		338D3401246EC65D000D8518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338D340A246EC6DD000D8518 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
+		338D340D246EC777000D8518 /* MoviesCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCore.swift; sourceTree = "<group>"; };
+		338D3411246EC822000D8518 /* PaginatedResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginatedResponse.swift; sourceTree = "<group>"; };
+		338D3412246EC822000D8518 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		338D3413246EC822000D8518 /* SimpleResponce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleResponce.swift; sourceTree = "<group>"; };
+		338D3414246EC822000D8518 /* ShowFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowFilters.swift; sourceTree = "<group>"; };
+		338D341B246EC832000D8518 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		338D341C246EC832000D8518 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		338D341D246EC833000D8518 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		338D341E246EC833000D8518 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		338D3423246ECADE000D8518 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		338D3427246ED8C0000D8518 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
+		338D342E246EEA6E000D8518 /* CarouselBackdropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselBackdropView.swift; sourceTree = "<group>"; };
+		338D3430246EED9C000D8518 /* CarouselPosterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselPosterView.swift; sourceTree = "<group>"; };
+		338D343224701F1A000D8518 /* SearchCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCore.swift; sourceTree = "<group>"; };
+		338D343424702580000D8518 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		338D3436247037B1000D8518 /* RingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		338D343824703984000D8518 /* DismissingKeyboardOnSwipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissingKeyboardOnSwipe.swift; sourceTree = "<group>"; };
+		33B0D6872470474C009C5CAE /* ComposableArchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComposableArchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B0D6892470474C009C5CAE /* ComposableArchDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableArchDemoTests.swift; sourceTree = "<group>"; };
+		33B0D68B2470474C009C5CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		338D33ED246EC65C000D8518 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338D342D246EEA36000D8518 /* SDWebImageSwiftUI in Frameworks */,
+				338D3409246EC6BF000D8518 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33B0D6842470474C009C5CAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				338D33F2246EC65C000D8518 /* ComposableArchDemo */,
+				33B0D6882470474C009C5CAE /* ComposableArchDemoTests */,
 				338D33F1246EC65C000D8518 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				338D33F0246EC65C000D8518 /* ComposableArchDemo.app */,
+				33B0D6872470474C009C5CAE /* ComposableArchDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +119,11 @@
 		338D33F2246EC65C000D8518 /* ComposableArchDemo */ = {
 			isa = PBXGroup;
 			children = (
+				338D3426246ED89E000D8518 /* Views */,
+				338D341A246EC824000D8518 /* Model */,
+				338D340F246EC80E000D8518 /* Backend */,
+				338D340C246EC750000D8518 /* Core */,
+				338D340A246EC6DD000D8518 /* AppCore.swift */,
 				338D33F3246EC65C000D8518 /* AppDelegate.swift */,
 				338D33F5246EC65C000D8518 /* SceneDelegate.swift */,
 				338D33F7246EC65C000D8518 /* ContentView.swift */,
@@ -75,6 +143,84 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		338D340C246EC750000D8518 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				338D340D246EC777000D8518 /* MoviesCore.swift */,
+				338D343224701F1A000D8518 /* SearchCore.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		338D340F246EC80E000D8518 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				338D3412246EC822000D8518 /* APIService.swift */,
+				338D3411246EC822000D8518 /* PaginatedResponse.swift */,
+				338D3414246EC822000D8518 /* ShowFilters.swift */,
+				338D3413246EC822000D8518 /* SimpleResponce.swift */,
+				338D3423246ECADE000D8518 /* APIClient.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		338D341A246EC824000D8518 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				338D341E246EC833000D8518 /* Genre.swift */,
+				338D341D246EC833000D8518 /* Movie.swift */,
+				338D341C246EC832000D8518 /* People.swift */,
+				338D341B246EC832000D8518 /* Video.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		338D3426246ED89E000D8518 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				338D343C247039B5000D8518 /* Search */,
+				338D343B247039A8000D8518 /* Movies */,
+				338D343A24703989000D8518 /* ViewModifier */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		338D343A24703989000D8518 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				338D343824703984000D8518 /* DismissingKeyboardOnSwipe.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		338D343B247039A8000D8518 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				338D3427246ED8C0000D8518 /* MoviesView.swift */,
+				338D3430246EED9C000D8518 /* CarouselPosterView.swift */,
+				338D342E246EEA6E000D8518 /* CarouselBackdropView.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		338D343C247039B5000D8518 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				338D343424702580000D8518 /* SearchView.swift */,
+				338D3436247037B1000D8518 /* RingView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		33B0D6882470474C009C5CAE /* ComposableArchDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				33B0D6892470474C009C5CAE /* ComposableArchDemoTests.swift */,
+				33B0D68B2470474C009C5CAE /* Info.plist */,
+			);
+			path = ComposableArchDemoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +237,31 @@
 			dependencies = (
 			);
 			name = ComposableArchDemo;
+			packageProductDependencies = (
+				338D3408246EC6BF000D8518 /* ComposableArchitecture */,
+				338D342C246EEA36000D8518 /* SDWebImageSwiftUI */,
+			);
 			productName = ComposableArchDemo;
 			productReference = 338D33F0246EC65C000D8518 /* ComposableArchDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		33B0D6862470474C009C5CAE /* ComposableArchDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33B0D6902470474C009C5CAE /* Build configuration list for PBXNativeTarget "ComposableArchDemoTests" */;
+			buildPhases = (
+				33B0D6832470474C009C5CAE /* Sources */,
+				33B0D6842470474C009C5CAE /* Frameworks */,
+				33B0D6852470474C009C5CAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33B0D68D2470474C009C5CAE /* PBXTargetDependency */,
+			);
+			name = ComposableArchDemoTests;
+			productName = ComposableArchDemoTests;
+			productReference = 33B0D6872470474C009C5CAE /* ComposableArchDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -108,6 +276,10 @@
 					338D33EF246EC65C000D8518 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
+					33B0D6862470474C009C5CAE = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 338D33EF246EC65C000D8518;
+					};
 				};
 			};
 			buildConfigurationList = 338D33EB246EC65C000D8518 /* Build configuration list for PBXProject "ComposableArchDemo" */;
@@ -119,11 +291,16 @@
 				Base,
 			);
 			mainGroup = 338D33E7246EC65C000D8518;
+			packageReferences = (
+				338D3407246EC6BF000D8518 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				338D342B246EEA36000D8518 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 338D33F1246EC65C000D8518 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				338D33EF246EC65C000D8518 /* ComposableArchDemo */,
+				33B0D6862470474C009C5CAE /* ComposableArchDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +316,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		33B0D6852470474C009C5CAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -146,13 +330,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338D343524702580000D8518 /* SearchView.swift in Sources */,
+				338D340E246EC777000D8518 /* MoviesCore.swift in Sources */,
+				338D342F246EEA6E000D8518 /* CarouselBackdropView.swift in Sources */,
 				338D33F4246EC65C000D8518 /* AppDelegate.swift in Sources */,
 				338D33F6246EC65C000D8518 /* SceneDelegate.swift in Sources */,
+				338D3420246EC833000D8518 /* People.swift in Sources */,
+				338D3418246EC822000D8518 /* SimpleResponce.swift in Sources */,
+				338D343924703984000D8518 /* DismissingKeyboardOnSwipe.swift in Sources */,
+				338D3431246EED9C000D8518 /* CarouselPosterView.swift in Sources */,
+				338D340B246EC6DD000D8518 /* AppCore.swift in Sources */,
 				338D33F8246EC65C000D8518 /* ContentView.swift in Sources */,
+				338D3424246ECADE000D8518 /* APIClient.swift in Sources */,
+				338D3428246ED8C0000D8518 /* MoviesView.swift in Sources */,
+				338D3421246EC833000D8518 /* Movie.swift in Sources */,
+				338D341F246EC833000D8518 /* Video.swift in Sources */,
+				338D3417246EC822000D8518 /* APIService.swift in Sources */,
+				338D343324701F1A000D8518 /* SearchCore.swift in Sources */,
+				338D3419246EC822000D8518 /* ShowFilters.swift in Sources */,
+				338D3437247037B1000D8518 /* RingView.swift in Sources */,
+				338D3416246EC822000D8518 /* PaginatedResponse.swift in Sources */,
+				338D3422246EC833000D8518 /* Genre.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33B0D6832470474C009C5CAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B0D68A2470474C009C5CAE /* ComposableArchDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33B0D68D2470474C009C5CAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338D33EF246EC65C000D8518 /* ComposableArchDemo */;
+			targetProxy = 33B0D68C2470474C009C5CAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		338D33FE246EC65D000D8518 /* LaunchScreen.storyboard */ = {
@@ -320,6 +538,46 @@
 			};
 			name = Release;
 		};
+		33B0D68E2470474C009C5CAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q8WF6H43T;
+				INFOPLIST_FILE = ComposableArchDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dani.moviesReduxLike.ComposableArchDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComposableArchDemo.app/ComposableArchDemo";
+			};
+			name = Debug;
+		};
+		33B0D68F2470474C009C5CAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q8WF6H43T;
+				INFOPLIST_FILE = ComposableArchDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dani.moviesReduxLike.ComposableArchDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComposableArchDemo.app/ComposableArchDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -341,7 +599,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		33B0D6902470474C009C5CAE /* Build configuration list for PBXNativeTarget "ComposableArchDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33B0D68E2470474C009C5CAE /* Debug */,
+				33B0D68F2470474C009C5CAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		338D3407246EC6BF000D8518 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		338D342B246EEA36000D8518 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		338D3408246EC6BF000D8518 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 338D3407246EC6BF000D8518 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		338D342C246EEA36000D8518 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 338D342B246EEA36000D8518 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 338D33E8246EC65C000D8518 /* Project object */;
 }

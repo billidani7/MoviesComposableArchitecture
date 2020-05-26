@@ -7,30 +7,45 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct ContentView: View {
     @State private var selection = 0
+    
+    let store = Store(initialState: AppState(),
+                      reducer: appReducer.debug(),
+                      environment: AppEnvironment(
+                        apiClient: .actions,
+                        mainQueue: DispatchQueue.main.eraseToAnyScheduler()
+                      )
+    )
  
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("First")
-                    }
+            
+            IfLetStore(self.store.scope(state: { $0.movies }, action: AppAction.movies)) { store in
+                MoviesView(store: store)
+            }
+            .font(.title)
+            .tabItem {
+                VStack {
+                    Image(systemName: "film")
+                    Text("Movies")
                 }
-                .tag(0)
-            Text("Second View")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("Second")
-                    }
+            }
+            .tag(0)
+            
+            IfLetStore(self.store.scope(state: { $0.search }, action: AppAction.search)) { store in
+                SearchView(store: store)
+            }
+            .font(.title)
+            .tabItem {
+                VStack {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
                 }
-                .tag(1)
+            }
+            .tag(1)
         }
     }
 }
