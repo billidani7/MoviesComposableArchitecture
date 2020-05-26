@@ -27,8 +27,8 @@ public enum SearchAction: Equatable {
 Another action is when we get a response from the API. We will add this Action to the emum that we have created before.
 ```Swift
 public enum SearchAction: Equatable {
-    case searchQueryChanged(String)
-    case moviesResponce(Result<PaginatedResponse<Movie>, Never>)
+    case searchQueryChanged(String) //Action when user types in text field
+    case moviesResponce(Result<PaginatedResponse<Movie>, Never>) //Action when we get results from API
 }
 ```
 
