@@ -12,6 +12,7 @@ import ComposableArchitecture
 public struct MoviesState: Equatable {
     var moviesTrending: [Movie] = []
     var tvPopular: [Movie] = []
+    var tvTopRated: [Movie] = []
 
   public init() {}
 }
@@ -22,6 +23,9 @@ public enum MoviesAction: Equatable {
     
     case getTvPopular
     case tvPopularResponce(Result<PaginatedResponse<Movie>, Never>)
+    
+    case getTvTopRated
+    case tvTopRatedResponce(Result<PaginatedResponse<Movie>, Never>)
 }
 
 
@@ -62,6 +66,16 @@ public let moviesReducer = Reducer<MoviesState, MoviesAction, MoviesEnvironment>
     
     case let .tvPopularResponce(.success(responce)):
         state.tvPopular = responce.results
+        return .none
+    
+    case .getTvTopRated:
+        return environment.apiClient.getMediaWithFilter(.topRated(.tvType))
+            .receive(on: environment.mainQueue)
+            .catchToEffect()
+            .map(MoviesAction.tvTopRatedResponce)
+    
+    case let .tvTopRatedResponce( .success(responce)):
+        state.tvTopRated = responce.results
         return .none
     }
 

@@ -14,6 +14,7 @@ public struct MoviesView: View {
     struct ViewState: Equatable {
         var moviesTrending: [Movie]
         var tvPopular: [Movie]
+        var tvTopRated: [Movie]
         
     }
     
@@ -23,6 +24,9 @@ public struct MoviesView: View {
         
         case getTvPopular
         case tvPopularResponce(Result<PaginatedResponse<Movie>, Never>)
+        
+        case getTvTopRated
+        case tvTopRatedResponce(Result<PaginatedResponse<Movie>, Never>)
     }
     
     let store: Store<MoviesState, MoviesAction>
@@ -35,6 +39,7 @@ public struct MoviesView: View {
         WithViewStore(self.store.scope(state: {$0.view}, action: MoviesAction.view)){ viewStore in
             
             ScrollView {
+                
                 VStack(spacing: 2){
                     Text("Trending movies")
                     .font(.title)
@@ -45,9 +50,9 @@ public struct MoviesView: View {
                     
                     CarouselBackdropView(movies: viewStore.state.moviesTrending)
                        .onAppear() {
-                               if viewStore.state.moviesTrending.count == 0 {
-                                   viewStore.send(.getMoviesTrending)
-                               }
+                           if viewStore.state.moviesTrending.count == 0 {
+                               viewStore.send(.getMoviesTrending)
+                           }
                        }
                     
                     
@@ -64,10 +69,24 @@ public struct MoviesView: View {
                                 viewStore.send(.getTvPopular)
                             }
                     }
+                    
+                    Text("Top Rated TV shows")
+                    .font(.title)
+                    .foregroundColor(Color(#colorLiteral(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 15)
+                    .padding(.top, 20)
+                    .padding(.bottom, 15)
+                    CarouselPosterView(movies: viewStore.state.tvTopRated)
+                        .onAppear() {
+                            if viewStore.state.tvTopRated.count == 0 {
+                                viewStore.send(.getTvTopRated)
+                            }
+                    }
                 }
                 
                 
-                Spacer()
+                
                 
                 
             }
@@ -79,7 +98,10 @@ public struct MoviesView: View {
 
 extension MoviesState {
     var view: MoviesView.ViewState {
-        MoviesView.ViewState(moviesTrending: self.moviesTrending, tvPopular: self.tvPopular)
+        MoviesView.ViewState(moviesTrending: self.moviesTrending,
+                             tvPopular: self.tvPopular,
+                             tvTopRated: self.tvTopRated
+        )
     }
     
 }
@@ -97,6 +119,11 @@ extension MoviesAction {
             return .getTvPopular
         case let .tvPopularResponce(responce):
             return .tvPopularResponce(responce)
+        
+        case .getTvTopRated:
+            return .getTvTopRated
+        case let .tvTopRatedResponce(responce):
+            return .tvTopRatedResponce(responce)
         }
         
     }
