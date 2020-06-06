@@ -1,7 +1,7 @@
 # Composable Architecture
-Redux-like Architecture with SwiftUI
+Redux-like Architecture in SwiftUI
 
-This is an application that uses the MovieDB API and is built with SwiftUI. The full app is available on AppStore. Here is a demo, showing the modern approach of building iOS apps. The app follows unidirectional data flow and shows how to represent the UI as a reactive finite-state machine.
+This is an application that uses the MovieDB API and is built with SwiftUI. The full app is available on [App Store](https://apps.apple.com/gr/app/movies-tv-shows/id1513383316). Here is a demo, showing the modern approach of building iOS apps. The app follows unidirectional data flow and shows how to represent the UI as a reactive finite-state machine.
 
 ![Farmers Market Finder Demo](movie-preview.gif)
 
@@ -73,3 +73,4 @@ public let searchReducer = Reducer<SearchState, SearchAction, SearchEnvironment>
 }
 
 ```
+The app is based on this [library](https://github.com/pointfreeco/swift-composable-architecture)
