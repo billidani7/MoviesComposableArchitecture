@@ -74,3 +74,6 @@ public let searchReducer = Reducer<SearchState, SearchAction, SearchEnvironment>
 
 ```
 The app is based on this [library](https://github.com/pointfreeco/swift-composable-architecture)
+
+### What's next
+If you are interested for one more powerfull design pattern, take a look [here](https://github.com/billidani7/CaloriesMVVM).
