@@ -79,5 +79,4 @@ public let moviesReducer = Reducer<MoviesState, MoviesAction, MoviesEnvironment>
         return .none
     }
 
-
 }
